@@ -2,11 +2,10 @@
 
 MyNativeClass::MyNativeClass(MyNativeClassListner * listner)
 {
+	this->listner = listner;
 }
 
 void MyNativeClass::Callback()
 {
-	listner->callback("Hello form c++");
-
-
+	this->listner->callback("Hello form c++\n");
 }

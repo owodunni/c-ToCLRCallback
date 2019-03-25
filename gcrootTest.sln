@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gcrootTest", "gcrootTest\gcrootTest.vcxproj", "{3ADFF736-23B3-421A-A78E-EA9AAB7DA9B2}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "consoleApplication", "consoleApplication\consoleApplication.vcxproj", "{87FCA799-2FFA-41C3-8448-167CA6D9DB6F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3ADFF736-23B3-421A-A78E-EA9AAB7DA9B2} = {3ADFF736-23B3-421A-A78E-EA9AAB7DA9B2}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
