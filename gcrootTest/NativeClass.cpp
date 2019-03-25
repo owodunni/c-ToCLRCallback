@@ -1,8 +1,7 @@
 #include "nativeClass.h"
 
-MyNativeClass::MyNativeClass(MyNativeClassListner * listner)
+MyNativeClass::MyNativeClass()
 {
-	this->listner = listner;
 }
 
 void MyNativeClass::Callback()

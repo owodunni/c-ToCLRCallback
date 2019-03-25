@@ -4,9 +4,10 @@
 using namespace System;
 
 
-MyManagedClass::MyManagedClass()
+MyManagedClass::MyManagedClass(MyNativeClass * nativeClass)
 {
-
+	this->nativeClass = nativeClass;
+	this->nativeClass->listner = new MyManagedClassListner(this);
 }
 
 void MyManagedClass::printCallback(std::string callbackString)

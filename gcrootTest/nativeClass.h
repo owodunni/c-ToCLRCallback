@@ -9,10 +9,9 @@ public:
 
 class MyNativeClass {
 public:
-	MyNativeClass(MyNativeClassListner * listner);
+	MyNativeClass();
 
 	void Callback();
 
-private:
 	MyNativeClassListner * listner = nullptr;
 };

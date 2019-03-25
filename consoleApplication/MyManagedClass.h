@@ -2,15 +2,10 @@
 
 #include <string>
 #include "gcroot.h"
-
-ref class MyManagedClass
-{
-public:
-	MyManagedClass();
-	void printCallback(std::string callbackString);
-};
-
 #include "nativeClass.h"
+
+ref class MyManagedClass;
+
 class MyManagedClassListner : public MyNativeClassListner {
 public:
 	MyManagedClassListner(gcroot<MyManagedClass^>);
@@ -20,3 +15,14 @@ public:
 private:
 	gcroot<MyManagedClass^> listner;
 };
+
+ref class MyManagedClass
+{
+public:
+	MyManagedClass(MyNativeClass* nativeClass);
+	void printCallback(std::string callbackString);
+	MyNativeClass* nativeClass;
+	MyManagedClassListner* myListner;
+};
+
+
